@@ -42,17 +42,17 @@ function sendRequest(name, phone, address, goods, sum)
     let countOfGoods = goods.length;
 
     for (let i = 0; i < countOfGoods; i += 1) {
-        data.goods.push = {goods: title[i], goods:count[i]}; 
+        data.goods.push = {title: goods.title[i], count: goods.count[i]}; 
         }
 
         
-        data.order.address += `ул. Ленина, дом 2, 4 подъезд, 5 этаж, кв 53`;
-        let jsonAddress = JSON.stringify(address)
+        data.order.address =`${address}`;
         
+
     data.order.sum = sum;
 
-    data.client = name + phone;
-    data.client = "Иван +7(987)65-43-210"
+    data.client = name + " " + phone;
+    
    
     let jsonData = JSON.stringify({data});
 
